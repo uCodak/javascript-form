@@ -1,4 +1,22 @@
+//profile
+const fileInput = document.getElementById('file_upload');
+const previewContainer = document.getElementById('previewContainer');
 
+fileInput.addEventListener('change', function () {
+  const file = this.files[0];
+
+  if (file && file.type.startsWith('image/')) {
+    const reader = new FileReader();
+
+    reader.onload = function (e) {
+      previewContainer.innerHTML = `<img src="${e.target.result}" alt="Preview" class="w-full h-full object-cover">`;
+    };
+
+    reader.readAsDataURL(file);
+  } else {
+    previewContainer.innerHTML = '<span class="text-gray-400 text-sm">No image</span>';
+  }
+});
 
 
 const firstPage = document.getElementById('first-page');
