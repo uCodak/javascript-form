@@ -9,7 +9,7 @@ fileInput.addEventListener('change', function () {
     const reader = new FileReader();
 
     reader.onload = function (e) {
-      previewContainer.innerHTML = `<img src="${e.target.result}" alt="Preview" class="w-full h-full object-cover">`;
+      previewContainer.innerHTML = `<img src="${e.target.result}" alt="Preview" class="w-[100px] mt-6 rounded-full border-2 border-gray-300 overflow-hidden h-full object-cover">`;
     };
 
     reader.readAsDataURL(file);

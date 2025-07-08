@@ -248,6 +248,12 @@
   .w-\[50\%\] {
     width: 50%;
   }
+  .w-\[100PX\] {
+    width: 100PX;
+  }
+  .w-\[100px\] {
+    width: 100px;
+  }
   .w-full {
     width: 100%;
   }
